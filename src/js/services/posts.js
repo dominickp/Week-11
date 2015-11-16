@@ -1,7 +1,7 @@
 angular.module('directings')
 .service('posts', ['$http', 'users', function($http, users){
   var svc = this;
-  svc.current;
+  svc.current = {id:0};
 
   svc.data = [];
   svc.get = function(callback){
