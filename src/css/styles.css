@@ -6,3 +6,7 @@ a.unlink:hover {
   text-decoration: none;
   cursor: pointer;
 }
+.active-post {
+  background-color: green;
+  color: white;
+}

@@ -29,4 +29,12 @@ angular.module('directings')
     });
   };
 
+  svc.isActive = function(id){
+    if(id == svc.current.id){
+      return true;
+    } else {
+      return false;
+    }
+  };
+
 }]);

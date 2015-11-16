@@ -13,7 +13,7 @@
       <div class="well col-md-6" ng-controller="ListController as lc">
         <h2>ListController</h2>
         <ul>
-          <li ng-repeat="(index, post) in lc.posts.data">
+          <li ng-repeat="(index, post) in lc.posts.data" ng-class="{'active-post':lc.posts.isActive(post.id)}">
             <a class="unlink" ng-click="lc.display(post)">
               <post-display post="post"></post-display>
             </a>
