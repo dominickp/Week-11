@@ -10,3 +10,6 @@ a.unlink:hover {
   background-color: green;
   color: white;
 }
+.display {
+  position: fixed;
+}

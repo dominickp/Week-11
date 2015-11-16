@@ -23,9 +23,11 @@
 
       <post-list class="well col-md-4"></post-list>
 
-      <div class="well col-md-4" ng-controller="DisplayController as dc">
-        <h2>DisplayController</h2>
-        <post-display post="dc.posts.current" body="true"></post-display>
+      <div class="col-md-4" ng-controller="DisplayController as dc">
+        <div class="well display">
+          <h2>DisplayController</h2>
+          <post-display post="dc.posts.current" body="true"></post-display>
+        </div>
       </div>
 
     </div>
