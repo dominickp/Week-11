@@ -1,0 +1,8 @@
+<h2>Post List</h2>
+<ul>
+  <li ng-repeat="(index, post) in dl.posts.data" ng-class="{'active-post':dl.posts.isActive(post.id)}">
+    <a class="unlink" ng-click="dl.display(post)">
+      <post-display post="post"></post-display>
+    </a>
+  </li>
+</ul>
