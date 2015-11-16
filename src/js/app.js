@@ -1,1 +1,1 @@
-angular.module('directings', []);
+angular.module('directings', ['ngRoute']);
