@@ -51,15 +51,23 @@
 5. Create a new template for post-list.html
   * give it the contents of the ListController html in index.html
 6. Add that template to the `templateUrl` of the directive
-7. Add a controller to the `postList` directive's DDO
-  * `controller: function(){ ... },`
-  * give that controller the same contents of the List Controller
+7. Add 'ListController' to the `postList` directive's DDO
+ * `controller: 'ListController',`
 8. Add a dependency to the `posts` service to the directive
 9. Add a `controllerAs` to the DDO, give it a value of `lc`
   * or rename it to something more semantically meaningful *it is the variable name used in the template*
+10. Test that
+11. 
+
+## Change the ListController to use the directive's controller
+*on your own*
+
+1. Change the `controller` on the `postList` directive's DDO to an explicit, inline controller
+  * `controller: function(){ ... },`
+  * give that controller the same contents of the List Controller
 
 ## Unit test ListController
-*by yourself*
+*on your own*
 
 1. `beforeEach` and initialize the module
 2. Use `module(function($provide){ ...` to mock the posts service
