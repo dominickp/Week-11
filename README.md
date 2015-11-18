@@ -158,5 +158,13 @@
     </nav>
 ```
 
+## Move `<nav>` to it's own template
+*on your own*
+
+1. Use `ng-include` to include a template file that will have the `<nav>` in it
+  * Note: an `ng-include` expects an expression as the `src` so you need to wrap the template string in single quotes
+  * `<ng-include src="..."></ng-include>`
+  * `<div ng-include="..."></div>`
+
 *Note on testing*: There's nothing that's unit testable with routes, unless you really want to check to make sure the variables in the routeProvider are set. But that's like testing a variable assignment. Don't go nuts with unit testing, it's for (listed in order of priority) services, directives and controllers. If you're going to test nothing else, test services. If you can do more testing, do directives. If you feel like you really want to, test controllers. But you can stop there. That's all angular is built to test. Anything else should be tested with e2e testing.
 
