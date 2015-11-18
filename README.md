@@ -160,19 +160,3 @@
 
 *Note on testing*: There's nothing that's unit testable with routes, unless you really want to check to make sure the variables in the routeProvider are set. But that's like testing a variable assignment. Don't go nuts with unit testing, it's for (listed in order of priority) services, directives and controllers. If you're going to test nothing else, test services. If you can do more testing, do directives. If you feel like you really want to, test controllers. But you can stop there. That's all angular is built to test. Anything else should be tested with e2e testing.
 
-
-
-
-
-## `$scope.$digest()`
-*together*
-
-1. Create a service with a dependency on `$timeout`
-  * *this will function just like any asynchronous call*
-2. Give that service a single value and initialize it to 0
-3. Give that service a single method that adds one to that value inside a `$timeout` callback
-  * https://docs.angularjs.org/api/ng/service/$timeout
-4. Create a button with an ng-click that will call that method
-5. Test that
-6. Pass that method a callback with $scope.$digest() in it
-  * *be sure to include $scope in your controller (or directive) and call $digest from there*
