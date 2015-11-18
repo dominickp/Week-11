@@ -94,6 +94,7 @@
 ## Set up `ngRoute`
 
 1. `bower install angular-route`
+  * Make sure angular-route.min.js gets added after angular.min.js in gulp and karma
 2. Import `ngRoute` into the module
 3. Add `<div ng-view></div>` somewhere high up in the index.html template file
 4. Create a "controller.html" file in the templates directory, just throw some text into it
@@ -108,14 +109,15 @@
 ```
 **Make sure your text shows on the index**
 
-## Move the controller list app into
+## Move the controller and directive apps into different templates
 *on your own*
 
 1. Migrate everything having to do with the controller app into the controller.html
 2. Migrate everything having to do with the directive half of the app into directive.html
-  * and repeat the setup for that
+  * and repeat the setup for that (*.when('/directive', { ... })*)
 
 ## Otherwise, go to list
+*together*
 
 1. Create an `otherwise` in the `$routeProvider`
 2. Use `redirectTo:` to redirect to the controller template
@@ -126,6 +128,7 @@
 ```
 
 ## Add a bootstrap nav
+*together*
 
 1. Just add the following code for a basic bootstrap nav
 ```
@@ -148,6 +151,10 @@
 ```
 
 *Note on testing*: There's nothing that's unit testable with routes, unless you really want to check to make sure the variables in the routeProvider are set. But that's like testing a variable assignment. Don't go nuts with unit testing, it's for (listed in order of priority) services, directives and controllers. If you're going to test nothing else, test services. If you can do more testing, do directives. If you feel like you really want to, test controllers. But you can stop there. That's all angular is built to test. Anything else should be tested with e2e testing.
+
+
+
+
 
 ## `$scope.$digest()`
 *together*
