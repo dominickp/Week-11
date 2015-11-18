@@ -7,33 +7,28 @@
     <script src="app.js"></script>
   </head>
   <body ng-app="directings" class="container">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Directings</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a ng-href="#/controller">Controller</a></li>
+            <li><a ng-href="#/directive">Directive</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
     <h1>Hello Directings</h1>
 
     <div ng-view></div>
-
-    <div class="row">
-
-      <div class="well col-md-4" ng-controller="ListController as lc">
-        <h2>ListController</h2>
-        <ul>
-          <li ng-repeat="(index, post) in lc.posts.data" ng-class="{'active-post':lc.posts.isActive(post.id)}">
-            <a class="unlink" ng-click="lc.display(post)">
-              <post-display post="post"></post-display>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <post-list class="well col-md-4"></post-list>
-
-      <div class="col-md-4" ng-controller="DisplayController as dc">
-        <div class="well display">
-          <h2>DisplayController</h2>
-          <post-display post="dc.posts.current" body="true"></post-display>
-        </div>
-      </div>
-
-    </div>
 
   </body>
 </html>
