@@ -59,7 +59,7 @@
 10. Test that
 11. 
 
-## Change the ListController to use the directive's controller
+## Change the ListController to use an explicit, inline controller
 *on your own*
 
 1. Change the `controller` on the `postList` directive's DDO to an explicit, inline controller
