@@ -8,23 +8,19 @@
   </head>
   <body ng-app="directings" class="container">
     <h1>Hello Directings</h1>
-
-    <div ng-view></div>
-
+    
     <div class="row">
 
       <div class="well col-md-4" ng-controller="ListController as lc">
         <h2>ListController</h2>
         <ul>
-          <li ng-repeat="(index, post) in lc.posts.data" ng-class="{'active-post':lc.posts.isActive(post.id)}">
+          <li ng-repeat="(index, post) in lc.posts.data">
             <a class="unlink" ng-click="lc.display(post)">
               <post-display post="post"></post-display>
             </a>
           </li>
         </ul>
       </div>
-
-      <post-list class="well col-md-4"></post-list>
 
       <div class="col-md-4" ng-controller="DisplayController as dc">
         <div class="well display">

@@ -84,12 +84,6 @@ describe('posts service', function(){
     });
   });
 
-  describe("mapUsers", function(){
-    xit("should add a userName to the posts", function(){
-
-    });
-
-  });
 
 
 

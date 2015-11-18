@@ -1,7 +1,6 @@
 angular.module('directings')
 .service('posts', ['$http', 'users', function($http, users){
   var svc = this;
-  //svc.current = {id:0};
 
   svc.data = [];
   svc.get = function(callback){
@@ -27,16 +26,6 @@ angular.module('directings')
         });
       });
     });
-  };
-
-  svc.isActive = function(id){
-    if(svc.current !== undefined){
-      if(id == svc.current.id){
-        return true;
-      }
-    }
-    return false;
-
   };
 
 }]);
