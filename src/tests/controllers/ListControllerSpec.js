@@ -1,5 +1,5 @@
 describe("ListController", function(){
-  var $scope, posts, listController;
+  var posts, listController;
   beforeEach(function(){
     module('directings');
     module(function($provide){
@@ -11,7 +11,7 @@ describe("ListController", function(){
       });
     });
     inject(function($rootScope, $controller, $injector){
-      $scope = $rootScope.$new();
+      var $scope = $rootScope.$new();
       listController = $controller('ListController', {$scope: $scope});
       posts = $injector.get('posts');
     });
