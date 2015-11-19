@@ -7,19 +7,18 @@
     <script src="app.js"></script>
   </head>
   <body ng-app="directings" class="container">
+
+    <!--Single quotes needed in double quotes for src since it's looking for an expression-->
+    <ng-include src="'templates/nav.html'"></ng-include>
+
     <h1>Hello Directings</h1>
-    
+
+
+
     <div class="row">
 
+      <ng-view></ng-view>
 
-      <post-list class="well col-md-4"></post-list>
-
-      <div class="col-md-4" ng-controller="DisplayController as dc">
-        <div class="well display">
-          <h2>DisplayController</h2>
-          <post-display post="dc.posts.current" body="true">{{ dc.posts.current.title }}</post-display>
-        </div>
-      </div>
 
     </div>
 

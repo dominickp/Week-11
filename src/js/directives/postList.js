@@ -6,7 +6,10 @@ angular.module('directings')
             controller: function(){
                 var lc = this;
                 lc.posts = posts;
-                posts.get();
+
+                if(posts.data.length === 0){
+                    posts.get();
+                }
 
                 lc.display = function(post){
                     posts.current = post;
