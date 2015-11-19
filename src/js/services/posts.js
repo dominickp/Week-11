@@ -28,4 +28,15 @@ angular.module('directings')
     });
   };
 
+    svc.isActive = function(id){
+
+        if(svc.current !== undefined){
+            if(svc.current.id == id){
+                return true;
+            }
+            return false;
+        }
+
+    }
+
 }]);

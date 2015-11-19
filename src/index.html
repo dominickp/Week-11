@@ -14,9 +14,9 @@
       <div class="well col-md-4" ng-controller="ListController as lc">
         <h2>ListController</h2>
         <ul>
-          <li ng-repeat="(index, post) in lc.posts.data">
+          <li ng-repeat="(index, post) in lc.posts.data" ng-class="{'active-post':lc.posts.isActive(post.id)}">
             <a class="unlink" ng-click="lc.display(post)">
-              <post-display post="post"></post-display>
+              <post-display post="post">{{ post.title }}</post-display>
             </a>
           </li>
         </ul>
@@ -25,7 +25,7 @@
       <div class="col-md-4" ng-controller="DisplayController as dc">
         <div class="well display">
           <h2>DisplayController</h2>
-          <post-display post="dc.posts.current" body="true"></post-display>
+          <post-display post="dc.posts.current" body="true">{{ dc.posts.current.title }}</post-display>
         </div>
       </div>
 

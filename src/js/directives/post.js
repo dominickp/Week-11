@@ -1,6 +1,7 @@
 angular.module('directings')
 .directive('postDisplay', function(){
   return {
+    transclude: true,
     scope: {
       post: '=',
       body: '='
