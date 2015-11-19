@@ -8,11 +8,21 @@ describe("ListController", function(){
     beforeEach(function(){
     module('directings');
 
+        // Not testing the service, so need to mock it
+        module(function($provide){
+            $provide.service('posts', function(){
+                this.get = function(){
+
+                };
+            });
+        });
+
         // Injector gets services
         inject(function($controller, $rootScope, $injector){
             listController = $controller('ListController', { $scope:$rootScope.$new() })
             posts = $injector.get('posts');
         });
+
 
     });
 
